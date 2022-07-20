@@ -4,7 +4,7 @@ import { SiFacebook, SiTiktok, SiInstagram, SiTelegram } from "react-icons/si";
 
 function Footer() {
   return (
-    <footer className=" bg-orange-300 body-font">
+    <footer className=" bg-orange-300 px-10 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a
           href="/"

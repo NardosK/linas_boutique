@@ -5,20 +5,21 @@ import Header from "./component/Header/Header";
 import Home from "./component/Home/Home";
 import NotFound from "./component/NotFound/NotFound";
 import Contact from "./component/Contact/Contact";
+import Gallery from "./component/Gallery/Gallery";
+import About from "./component/About/About";
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <main>
         <Routes>
-          <Route exact path="/gallery" element={<NotFound />} />
-          <Route exact path="/contact" element={<NotFound />} />
-          <Route exact path="/about" element={<NotFound />} />
+          <Route exact path="/gallery" element={<Gallery />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Contact />
       <Footer />
     </BrowserRouter>
   );
