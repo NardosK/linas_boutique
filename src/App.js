@@ -4,7 +4,7 @@ import Footer from "./component/Footer/Footer";
 import Header from "./component/Header/Header";
 import Home from "./component/Home/Home";
 import NotFound from "./component/NotFound/NotFound";
-
+import Contact from "./component/Contact/Contact";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +18,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Contact />
       <Footer />
     </BrowserRouter>
   );
