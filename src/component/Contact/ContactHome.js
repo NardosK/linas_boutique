@@ -3,7 +3,7 @@ import React from "react";
 function ContactHome() {
   return (
     <section class="text-gray-600 body-font relative">
-      <div class="container px-5 py-12 mx-auto">
+      <div class="container px-5 py-2 mx-auto">
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Contact Us
@@ -55,18 +55,18 @@ function ContactHome() {
                 Send
               </button>
             </div>
-            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <a
-                href="mailto:linaboutique@gmail.com"
-                target="_blank"
-                class="text-indigo-500"
-              >
-                linasboutique@gmail.com
-              </a>
-              <p class="leading-normal my-5">
-                49 Smith St.
+            <div class="p-2 w-full border-t border-gray-200 text-center">
+              <p class="leading-normal my-3">
+                <span className="font-bold">
+                  5707 Seminary Rd, Suite 208
+                  <br />
+                  Falls Church, VA 22041
+                </span>
                 <br />
-                Saint Cloud, MN 56301
+                <a href="tel:17032832392" className="text-blue-600">
+                  +1-703-283-2392
+                </a>
+                <br /> MONDAY TO SUNDAY
               </p>
             </div>
           </div>

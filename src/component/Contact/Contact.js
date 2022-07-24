@@ -26,7 +26,7 @@ const Contact = () => {
   };
   return (
     <section className="text-gray-600 body-font relative">
-      <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
+      <div className="px-[4%] py-12 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
@@ -53,24 +53,30 @@ const Contact = () => {
                 EMAIL
               </h2>
               <a
-                href="mailto:linaboutique@gmail.com"
+                href="mailto:mohamedlina94@yahoo.com"
                 target="_blank"
                 className="text-indigo-500 leading-relaxed"
               >
-                linaboutique@gmail.com
+                mohamedlina94@yahoo.com
               </a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 CALL FOR APPOINTMENT
               </h2>
-              <p className="leading-relaxed">703-283-2392</p>
+              <p className="leading-relaxed">
+                <a href="tel:17032832392" className="text-blue-600">
+                  +1-703-283-2392
+                </a>
+              </p>
             </div>
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-            Contact us
+            Get In Touch!
           </h2>
-          <p className="leading-relaxed mb-5 text-gray-600">Never mind!</p>
+          <p className="leading-relaxed mb-5 text-gray-600">
+            Use the contact form below to get in touch.
+          </p>
           <div className="relative mb-4">
             <label for="name" className="leading-7 text-sm text-gray-600">
               Name
@@ -106,9 +112,8 @@ const Contact = () => {
           <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             Send
           </button>
-          <p className="text-xs text-gray-500 mt-3">
-            Chicharrones blog helvetica normcore iceland tousled brook viral
-            artisan.
+          <p className="text-xs text-gray-500 text-justify mt-3">
+            We would love to hear from you!
           </p>
         </div>
       </div>

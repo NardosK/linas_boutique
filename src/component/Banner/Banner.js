@@ -1,65 +1,7 @@
 import React from "react";
+import CarouselButton from "./CarouselButton";
 import lina from "../../assets/images/lina.jpg";
 import lina2 from "../../assets/images/lina2.jpg";
-
-const items = [
-  {
-    position: 0,
-    el: document.getElementById("carousel-item-1"),
-  },
-  {
-    position: 1,
-    el: document.getElementById("carousel-item-2"),
-  },
-  {
-    position: 2,
-    el: document.getElementById("carousel-item-3"),
-  },
-  {
-    position: 3,
-    el: document.getElementById("carousel-item-4"),
-  },
-];
-
-const options = {
-  activeItemPosition: 1,
-  interval: 3000,
-
-  indicators: {
-    activeclassNamees: "bg-white dark:bg-gray-800",
-    inactiveclassNamees:
-      "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
-    items: [
-      {
-        position: 0,
-        el: document.getElementById("carousel-indicator-1"),
-      },
-      {
-        position: 1,
-        el: document.getElementById("carousel-indicator-2"),
-      },
-      {
-        position: 2,
-        el: document.getElementById("carousel-indicator-3"),
-      },
-      {
-        position: 3,
-        el: document.getElementById("carousel-indicator-4"),
-      },
-    ],
-  },
-
-  // callback functions
-  onNext: () => {
-    console.log("next slider item is shown");
-  },
-  onPrev: () => {
-    console.log("previous slider item is shown");
-  },
-  onChange: () => {
-    console.log("new slider item has been shown");
-  },
-};
 
 function Banner() {
   return (
@@ -69,7 +11,7 @@ function Banner() {
       data-carousel="static"
     >
       {/* <!-- Carousel wrapper --> */}
-      <div className="overflow-hidden relative h-56 rounded-lg md:h-[35rem]">
+      <div className="overflow-hidden relative h-56 rounded-lg md:h-[40rem]">
         {/* <!-- Item 1 --> */}
         <div
           className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
@@ -166,6 +108,7 @@ function Banner() {
       </div>
       {/* <!-- Slider controls --> */}
       <button
+        id="data-carousel-prev"
         type="button"
         className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
         data-carousel-prev=""
@@ -190,6 +133,7 @@ function Banner() {
         </span>
       </button>
       <button
+        id="data-carousel-next"
         type="button"
         className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
         data-carousel-next=""

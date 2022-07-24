@@ -11,15 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
-        <Routes>
-          <Route exact path="/gallery" element={<Gallery />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route exact path="/gallery" element={<Gallery />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
