@@ -6,6 +6,7 @@ import Home from "./component/Home/Home";
 import NotFound from "./component/NotFound/NotFound";
 import Contact from "./component/Contact/Contact";
 import Gallery from "./component/Gallery/Gallery";
+import Admin from "./component/Admin/Admin";
 import About from "./component/About/About";
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/gallery" element={<Gallery />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/admin" element={<Admin />} />
         <Route exact path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

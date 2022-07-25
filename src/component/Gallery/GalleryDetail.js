@@ -6,7 +6,7 @@ function GalleryDetail({ imagePath }) {
       <div className="flex h-full w-full relative">
         <img
           alt="gallery"
-          className="absolute w-full h-full object-cover object-center"
+          className="absolute w-full h-full rounded-lg object-fill"
           src={imagePath}
         />
         {/* <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">

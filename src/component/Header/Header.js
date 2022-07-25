@@ -5,7 +5,7 @@ import logoImage from "../../assets/images/linaboutique.jpg";
 function Header() {
   return (
     <header className="bg-gray-900 text-white body-font px-10">
-      <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           href="/"
           className="block text-center md:text-left md:flex title-font font-medium items-center mb-4 md:mb-0"

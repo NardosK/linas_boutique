@@ -1,5 +1,5 @@
 import React from "react";
-import lina from "../../assets/images/lina.jpg";
+import lina from "../../assets/hero/lina.jpg";
 
 function About() {
   return (

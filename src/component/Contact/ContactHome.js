@@ -12,7 +12,7 @@ function ContactHome() {
         </div>
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
-            <div class="p-2 w-1/2">
+            <div class="p-2 w-full md:w-1/2">
               <div class="relative">
                 <label for="name" class="leading-7 text-sm text-gray-600">
                   Name
@@ -25,7 +25,7 @@ function ContactHome() {
                 />
               </div>
             </div>
-            <div class="p-2 w-1/2">
+            <div class="p-2 w-full md:w-1/2">
               <div class="relative">
                 <label for="email" class="leading-7 text-sm text-gray-600">
                   Email

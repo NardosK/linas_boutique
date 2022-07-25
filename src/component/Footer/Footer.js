@@ -12,7 +12,7 @@ import {
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white px-10 body-font">
-      <div className="px-5 py-6 md:py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <div className="container px-5 py-6 md:py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a
           href="/"
           className="flex title-font font-medium items-center md:justify-start justify-center"

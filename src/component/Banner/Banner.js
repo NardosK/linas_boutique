@@ -1,119 +1,81 @@
-import React from "react";
-import CarouselButton from "./CarouselButton";
-import lina from "../../assets/images/lina.jpg";
-import lina2 from "../../assets/images/lina2.jpg";
+import React, { useState, useEffect } from "react";
 
 function Banner() {
+  let [currentIndex, setIndex] = useState(0);
+  const [image, setImage] = useState("");
+  const [images, setImages] = useState([]);
+  const [time, setTime] = useState(5);
+
+  useEffect(() => {
+    setImage(images[currentIndex]);
+  }, [images, currentIndex]);
+
+  useEffect(() => {
+    setImages(
+      importAll(
+        require.context("../../assets/hero", false, /\.(png|jpe?g|svg)$/)
+      )
+    );
+  }, []);
+
+  const importAll = (r) => {
+    return r.keys().map(r);
+  };
+
   return (
     <div
       id="indicators-carousel"
-      className="relative my-5"
+      className="relative pt-4 pb-8 bg-slate-200"
       data-carousel="static"
     >
-      {/* <!-- Carousel wrapper --> */}
-      <div className="overflow-hidden relative h-56 rounded-lg md:h-[40rem]">
-        {/* <!-- Item 1 --> */}
+      <div className="container mx-auto overflow-hidden relative h-56 rounded-lg md:h-[28rem] lg:h-[38rem]">
+        {/* Items */}
         <div
           className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
           data-carousel-item="active"
         >
           <img
-            src={lina}
-            className="block absolute top-1/2 left-1/2 w-[90%] h-full -translate-x-1/2 -translate-y-1/2"
-            alt="..."
-          />
-        </div>
-        {/* <!-- Item 2 --> */}
-        <div
-          className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
-          data-carousel-item=""
-        >
-          <img
-            src={lina2}
-            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-            alt="..."
-          />
-        </div>
-        {/* <!-- Item 3 --> */}
-        <div
-          className="hidden duration-700 ease-in-out absolute inset-0 transition-all transform"
-          data-carousel-item=""
-        >
-          <img
-            src={lina}
-            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-            alt="..."
-          />
-        </div>
-        {/* <!-- Item 4 --> */}
-        <div
-          className="hidden duration-700 ease-in-out absolute inset-0 transition-all transform"
-          data-carousel-item=""
-        >
-          <img
-            src={lina2}
-            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-            alt="..."
-          />
-        </div>
-        {/* <!-- Item 5 --> */}
-        <div
-          className="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
-          data-carousel-item=""
-        >
-          <img
-            src={lina}
-            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+            src={image}
+            className="block absolute top-1/2 left-1/2 w-[90%] h-full rounded-md -translate-x-1/2 -translate-y-1/2"
             alt="..."
           />
         </div>
       </div>
-      {/* <!-- Slider indicators --> */}
-      <div className="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
-          aria-current="true"
-          aria-label="Slide 1"
-          data-carousel-slide-to="0"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-          aria-current="false"
-          aria-label="Slide 2"
-          data-carousel-slide-to="1"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-          aria-current="false"
-          aria-label="Slide 3"
-          data-carousel-slide-to="2"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-          aria-current="false"
-          aria-label="Slide 4"
-          data-carousel-slide-to="3"
-        ></button>
-        <button
-          type="button"
-          className="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-          aria-current="false"
-          aria-label="Slide 5"
-          data-carousel-slide-to="4"
-        ></button>
+      {/* Slider indicators */}
+      <div className="flex absolute bottom-3 left-1/2 z-30 space-x-3 -translate-x-1/2">
+        {images.map((image, index) => {
+          return (
+            <div
+              className="w-10 h-10 rounded-full bg-white dark:bg-gray-800"
+              onClick={(e) => {
+                e.preventDefault();
+                setImage(image);
+              }}
+              key={index}
+            >
+              <img
+                src={image}
+                alt=""
+                className="h-full w-full rounded-full object-cover"
+              />
+            </div>
+          );
+        })}
       </div>
-      {/* <!-- Slider controls --> */}
-      <button
+      {/* Slider controls */}
+      <div
         id="data-carousel-prev"
         type="button"
-        className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+        className="flex absolute top-0 left-0 z-30 justify-center items-center md:pl-4 h-full"
         data-carousel-prev=""
       >
-        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span
+          className="inline-flex cursor-pointer justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-slate-400/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          onClick={() => {
+            setIndex(currentIndex > 0 ? currentIndex - 1 : images.length - 1);
+            setImage(images[currentIndex]);
+          }}
+        >
           <svg
             aria-hidden="true"
             className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
@@ -131,14 +93,20 @@ function Banner() {
           </svg>
           <span className="sr-only">Previous</span>
         </span>
-      </button>
-      <button
+      </div>
+      <div
         id="data-carousel-next"
         type="button"
-        className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+        className="flex absolute top-0 right-0 z-30 justify-center items-center md:pr-4 h-full"
         data-carousel-next=""
       >
-        <span className="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span
+          className="inline-flex cursor-pointer justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-slate-400/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          onClick={() => {
+            setIndex(currentIndex + 1 < images.length ? currentIndex + 1 : 0);
+            setImage(images[currentIndex]);
+          }}
+        >
           <svg
             aria-hidden="true"
             className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
@@ -156,7 +124,7 @@ function Banner() {
           </svg>
           <span className="sr-only">Next</span>
         </span>
-      </button>
+      </div>
     </div>
   );
 }
