@@ -1,9 +1,9 @@
 import React from "react";
-import lina from "../../assets/hero/lina.jpg";
+import lina from "../../assets/images/lina.jpg";
 
 function About() {
   return (
-    <div className="container px-6 mx-auto my-4 text-xl text-justify">
+    <div className="container px-6 min-h-[68vh] mx-auto my-4 text-xl text-justify">
       <div className="h-full items-center w-full mx-auto lg:flex flex-row-reverse justify-between">
         <div className="h-full w-full lg:w-1/2 border-2 border-black">
           <img

@@ -25,10 +25,11 @@ function Banner() {
   return (
     <div
       id="indicators-carousel"
-      className="relative pt-4 pb-8 bg-slate-200"
+      className="relative pb-8 w-full mx-auto"
       data-carousel="static"
     >
-      <div className="container mx-auto overflow-hidden relative h-56 rounded-lg md:h-[28rem] lg:h-[38rem]">
+      {/* Slider Images */}
+      <div className="container mx-auto overflow-hidden relative w-full h-[20rem] md:h-[30rem] lg:h-[38rem]">
         {/* Items */}
         <div
           className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
@@ -36,7 +37,7 @@ function Banner() {
         >
           <img
             src={image}
-            className="block absolute top-1/2 left-1/2 w-[90%] h-full rounded-md -translate-x-1/2 -translate-y-1/2"
+            className="block absolute px-1 mx-auto top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2"
             alt="..."
           />
         </div>

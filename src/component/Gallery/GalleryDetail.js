@@ -2,7 +2,7 @@ import React from "react";
 
 function GalleryDetail({ imagePath }) {
   return (
-    <div className="h-72 md:h-[32rem] lg:h-[40rem] lg:w-1/3 w-full md:w-1/2 p-4">
+    <div className="h-72 md:h-[24rem] lg:h-[30rem] lg:w-1/3 w-full md:w-1/2 p-4">
       <div className="flex h-full w-full relative">
         <img
           alt="gallery"

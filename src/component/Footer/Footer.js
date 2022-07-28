@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "../../assets/images/linaboutique.jpg";
+import logoImage from "../../assets/images/logo.png";
 import {
   SiFacebook,
   SiTiktok,

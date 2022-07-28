@@ -13,7 +13,7 @@ function Book() {
   }, [second]);
 
   return (
-    <section class="text-gray-600 body-font relative">
+    <section class="text-black body-font relative">
       <div class="container px-5 py-2 mx-auto">
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -196,7 +196,7 @@ function Book() {
                   Falls Church, VA 22041
                 </span>
                 <br />
-                <a href="tel:17032832392" className="text-blue-600">
+                <a href="tel:17032832392" className="text-white">
                   +1-703-283-2392
                 </a>
                 <br /> MONDAY TO SUNDAY
