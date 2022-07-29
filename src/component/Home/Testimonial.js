@@ -4,6 +4,17 @@ function Testimonial() {
   return (
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+              Testimonials
+            </h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+          </div>
+          <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+            Here are few testimonials from some of our esteemed customers
+          </p>
+        </div>
         <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div class="h-full text-center">

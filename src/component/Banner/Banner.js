@@ -28,8 +28,9 @@ function Banner() {
       className="relative pb-8 w-full mx-auto"
       data-carousel="static"
     >
+      {/* <div className="fixed top-0 left-0 h-[20%] w-full from-yellow-200 via-yellow-200 to-transparent bg-gradient-180 opacity-50"></div> */}
       {/* Slider Images */}
-      <div className="container mx-auto overflow-hidden relative w-full h-[20rem] md:h-[30rem] lg:h-[38rem]">
+      <div className="container mx-auto overflow-hidden relative w-full h-[15rem] md:h-[30rem] lg:h-[38rem]">
         {/* Items */}
         <div
           className="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
@@ -51,6 +52,7 @@ function Banner() {
               onClick={(e) => {
                 e.preventDefault();
                 setImage(image);
+                setIndex(index);
               }}
               key={index}
             >

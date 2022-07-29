@@ -4,7 +4,7 @@ import lina from "../../assets/images/lina.jpg";
 function About() {
   return (
     <div className="container px-6 min-h-[68vh] mx-auto my-4 text-xl text-justify">
-      <div className="h-full items-center w-full mx-auto lg:flex flex-row-reverse justify-between">
+      <div className="h-full items-center text-sm md:text-base w-full mx-auto lg:flex flex-row-reverse justify-between">
         <div className="h-full w-full lg:w-1/2 border-2 border-black">
           <img
             src={lina}
@@ -14,12 +14,12 @@ function About() {
         </div>
         <div className="mt-4 lg:w-2/5">
           <p>
-            <span className="font-bold">Lina’s Boutique</span> we offer a wide
-            range of apparel traditional Islamic wear to fit any woman’s unique
-            sense of style. Our accessories are carefully curated to provide our
-            customers the latest fashions. To keep our customers in style we
-            post new arrivals daily, as well as offer stylist picks to help any
-            indecisive shoppers.
+            <span className="font-medium md:font-bold">Lina’s Boutique</span> we
+            offer a wide range of apparel traditional Islamic wear to fit any
+            woman’s unique sense of style. Our accessories are carefully curated
+            to provide our customers the latest fashions. To keep our customers
+            in style we post new arrivals daily, as well as offer stylist picks
+            to help any indecisive shoppers.
           </p>
           <br />
           <br />
