@@ -1,19 +1,41 @@
 import React, { useState, useEffect } from "react";
-
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 function Book() {
   const [showToast, setShowToast] = useState(false);
   const [second, setSecond] = useState(0);
 
   useEffect(() => {
+
     if (second > 0) {
       setSecond(second - 1);
     } else {
-      setShowToast(false);
+      setShowToast();
     }
   }, [second]);
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_8talne8",
+        "template_t90umc8",
+        form.current,
+        "9XM59AZcJ8ECL0VoG"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
-    <section class="text-black body-font relative">
+    <form ref={form} onSubmit={sendEmail} class="text-black body-font relative">
       <div class="container px-5 py-2 mx-auto">
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
@@ -205,7 +227,7 @@ function Book() {
           </div>
         </div>
       </div>
-    </section>
+    </form>
   );
 }
 

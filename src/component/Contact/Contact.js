@@ -53,6 +53,13 @@ const Contact = () => {
                 EMAIL
               </h2>
               <a
+                href="mailto:linaboutiques99@gmail.com"
+                target="_blank"
+                className="text-indigo-500 leading-relaxed"
+              >
+                linaboutiques99@gmail.com
+              </a><br />
+              <a
                 href="mailto:mohamedlina94@yahoo.com"
                 target="_blank"
                 className="text-indigo-500 leading-relaxed"
