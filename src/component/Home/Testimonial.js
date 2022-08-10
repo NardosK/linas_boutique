@@ -2,7 +2,6 @@ import React from "react";
 import Test from "./Test";
 
 function Testimonial() {
-  console.log(Test)
   return (
     < >
       <Test comment="it is great store" namePerson="Girma" title="Customer" />

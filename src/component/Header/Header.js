@@ -4,8 +4,8 @@ import logoImage from "../../assets/images/logo.png";
 
 function Header() {
   return (
-    <header className="text-black body-font px-10">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="w-full text-black body-font md:px-10">
+      <div className="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
         <a
           href="/"
           className="block text-center md:text-left md:flex title-font font-medium items-center mb-4 md:mb-0"
@@ -18,16 +18,16 @@ function Header() {
             />
           </div>
           <div className="justify-center md:justify-start">
-            <div className="ml-3 text-3xl font-medium md:text-xl font-serif">
+            <div className="md:ml-3 text-3xl font-medium md:text-xl font-serif">
               <span>LINA'S BOUTIQUE</span>
             </div>
-            <div className="ml-3 text-xs font-sans">
+            <div className="md:ml-3 text-xs font-sans">
               All Traditional Islamic Wear for Women
             </div>
           </div>
         </a>
         <nav className="md:ml-auto flex flex-wrap text-lg font-medium items-center justify-center">
-          <a href="/" className="mr-5 hover:text-indigo-600">
+          <a href="/" className="mx-5 hover:text-indigo-600">
             Home
           </a>
           <a href="/gallery" className="mr-5 hover:text-indigo-600">
