@@ -1,37 +1,69 @@
-import React from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
+// import React from "react";
+// import Ne from "./Ne"
+// function GalleryDetail({ imagePath }) {
+//   return (
 
-function GalleryDetail({ imagePath }) {
+//     <div className="h-72 md:h-[32rem] lg:h-[40rem] lg:w-1/3 w-full md:w-1/2 p-4">
+//       <div className="flex h-full w-full relative">
+//         <img
+//           alt="gallery"
+//           className="absolute w-full h-full rounded-lg object-fill"
+//           src={imagePath}
+//         />
+
+//       </div>
+//     </div>
+
+//   );
+// }
+
+// export default GalleryDetail;
+
+
+import * as React from 'react';
+
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import { CCloseButton } from '@coreui/react'
+import CloseIcon from '@mui/icons-material/Close';
+
+
+
+export default function BasicModal({ imagePath }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <div className="h-72 md:h-[24rem] lg:h-[30rem] lg:w-1/3 w-full md:w-1/2 p-4">
-      <div className="flex h-full w-full relative">
-        {imagePath ? (
+    <>
+
+      <div
+
+        className="h-72 md:h-[32rem] lg:h-[40rem] lg:w-1/3 w-full md:w-1/2 p-4">
+        <div className="flex h-full w-full relative" onClick={handleOpen}>
           <img
             alt="gallery"
-            className="absolute w-full h-full rounded-sm object-fill"
+            className="w-full h-full rounded-lg object-fill"
             src={imagePath}
-          />
-        ) : (
-          <Box sx={{ display: "flex" }}>
-            <CircularProgress />
-          </Box>
-        )}
-        {/* <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-          <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-            THE SUBTITLE
-          </h2>
-          <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-            Alper Kamu
-          </h1>
-          <p className="leading-relaxed">
-            Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-            microdosing tousled waistcoat.
-          </p>
-        </div> */}
-      </div>
-    </div>
+          /></div>
+
+
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          className="w-[80vh] h-[80vh] m-auto"
+        >
+
+          <div className="w-full h-full">
+            <img
+              alt="gallery"
+              className="h-full w-full rounded-lg object-fill"
+              src={imagePath}
+            />
+          </div>
+        </Modal>
+      </div ></>
   );
 }
-
-export default GalleryDetail;
