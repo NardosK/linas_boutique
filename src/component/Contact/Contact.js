@@ -14,6 +14,7 @@ const Contact = () => {
         form.current,
         "9XM59AZcJ8ECL0VoG"
       )
+
       .then(
         (result) => {
           console.log(result.text);
