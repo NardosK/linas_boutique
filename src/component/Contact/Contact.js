@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [location, setLocation] = useState(
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12429.542328511867!2d-77.124608!3d38.84653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b3f2d9820c83%3A0xb48db486ee5347a1!2s5707%20Seminary%20Rd%20%23208%2C%20Falls%20Church%2C%20VA%2022041!5e0!3m2!1sen!2sus!4v1658348304548!5m2!1sen!2sus"
+  );
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -37,16 +40,43 @@ const Contact = () => {
             marginheight="0"
             marginwidth="0"
             scrolling="no"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12429.542328511867!2d-77.124608!3d38.84653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b3f2d9820c83%3A0xb48db486ee5347a1!2s5707%20Seminary%20Rd%20%23208%2C%20Falls%20Church%2C%20VA%2022041!5e0!3m2!1sen!2sus!4v1658348304548!5m2!1sen!2sus"
-          // style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+            src={location}
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 ADDRESS
               </h2>
-              <p className="mt-1 text-black font-bold">5707 Seminary Rd #208</p>
-              <p className="mt-1">5707 Seminary Rd, Falls Church, VA 22041</p>
+              <span>
+                <p
+                  className="mt-1 text-black font-bold hover:text-blue-600 hover:cursor-pointer"
+                  onClick={() => {
+                    setLocation(
+                      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.160502029038!2d-77.1374736727229!3d38.85168289193558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b38915ee95b3%3A0x6f2965f949308a00!2s3425%20Payne%20St%2C%20Falls%20Church%2C%20VA%2022041!5e0!3m2!1sen!2sus!4v1660160699581!5m2!1sen!2sus"
+                    );
+                  }}
+                >
+                  3425 Payne St Suite
+                </p>
+                <p className="mt-1 text-gray-600">
+                  3425 Payne St Suite, Falls Church, VA 22041
+                </p>
+              </span>
+              <span>
+                <p
+                  className="mt-1 text-black font-bold hover:text-blue-600 hover:cursor-pointer"
+                  onClick={() => {
+                    setLocation(
+                      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12429.542328511867!2d-77.124608!3d38.84653!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b3f2d9820c83%3A0xb48db486ee5347a1!2s5707%20Seminary%20Rd%20%23208%2C%20Falls%20Church%2C%20VA%2022041!5e0!3m2!1sen!2sus!4v1658348304548!5m2!1sen!2sus"
+                    );
+                  }}
+                >
+                  5707 Seminary Rd #208
+                </p>
+                <p className="mt-1 text-gray-600">
+                  5707 Seminary Rd, Falls Church, VA 22041
+                </p>
+              </span>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
@@ -58,7 +88,8 @@ const Contact = () => {
                 className="text-indigo-500 leading-relaxed"
               >
                 linaboutiques99@gmail.com
-              </a><br />
+              </a>
+              <br />
               <a
                 href="mailto:mohamedlina94@yahoo.com"
                 target="_blank"
@@ -77,7 +108,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="lg:w-1/3 md:w-1/2 text-black flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="lg:w-1/3 md:w-1/2 text-black flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+        >
           <h2 className="text-lg mb-1 font-medium title-font">Get In Touch!</h2>
           <p className="leading-relaxed mb-5 ">
             Use the contact form below to get in touch.
