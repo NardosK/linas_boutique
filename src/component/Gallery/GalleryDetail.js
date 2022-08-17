@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 // import React from "react";
 // import Ne from "./Ne"
 // function GalleryDetail({ imagePath }) {
@@ -30,7 +29,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 
-export default function BasicModal({ imagePath }) {
+function GalleryDetail({ imagePath }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -66,22 +65,6 @@ export default function BasicModal({ imagePath }) {
           </div>
         </Modal>
       </div ></>
-=======
-import React from "react";
-import SimpleReactLightbox from 'simple-react-lightbox';
-function GalleryDetail({ imagePath }) {
-  return (
-    <SimpleReactLightbox>
-      <div className="h-72 md:h-[32rem] lg:h-[40rem] lg:w-1/3 w-full md:w-1/2 p-4">
-        <div className="flex h-full w-full relative">
-          <img
-            alt="gallery"
-            className="absolute w-full h-full rounded-lg object-fill"
-            src={imagePath}
-          />
-
-        </div>
-      </div></SimpleReactLightbox>
->>>>>>> Stashed changes
   );
 }
+export default GalleryDetail;

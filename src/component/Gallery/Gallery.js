@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import GalleryDetail from "./GalleryDetail";
-import { SRLWrapper } from 'simple-react-lightbox';
 
 function Gallery() {
   const [images, setImages] = useState([]);
@@ -31,26 +30,12 @@ function Gallery() {
             haven't heard of them man bun deep jianbing selfies heirloom.
           </p>
         </div>
-<<<<<<< Updated upstream
 
         <div className="flex flex-wrap -m-4">
           {images?.map((filePath, index) => (
             <GalleryDetail imagePath={filePath} key={index} />
           ))}
         </div>
-=======
-        <SRLWrapper>
-          <div className="flex flex-wrap -m-4">
-            {images?.map((filePath, index) => (
-
-              <a href={filePath} key={index} >
-                <GalleryDetail imagePath={filePath} key={index} />
-              </a>
-
-            ))}
-          </div>
-        </SRLWrapper>
->>>>>>> Stashed changes
         <nav aria-label="Page navigation example" className="justify-center">
           <ul class="inline-flex items-center -space-x-px">
             <li>
