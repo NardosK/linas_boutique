@@ -8,12 +8,14 @@ import Contact from "./component/Contact/Contact";
 import Gallery from "./component/Gallery/Gallery";
 import Admin from "./component/Admin/Admin";
 import About from "./component/About/About";
+
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route exact path="/gallery" element={<Gallery />} />
+
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/admin" element={<Admin />} />
