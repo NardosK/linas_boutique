@@ -29,7 +29,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 
-export default function BasicModal({ imagePath }) {
+function GalleryDetail({ imagePath }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -67,3 +67,4 @@ export default function BasicModal({ imagePath }) {
       </div ></>
   );
 }
+export default GalleryDetail;
