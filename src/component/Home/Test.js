@@ -17,7 +17,7 @@ function Test({ comment, namePerson, title, img }) {
     {namePerson}
    </h2>
   </div>
- );
+ )
 }
 
 export default Test;

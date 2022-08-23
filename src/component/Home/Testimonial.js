@@ -30,7 +30,6 @@ function Testimonial() {
               comment="First of all, I love, love, love this place. They always come through for me at the very last minute and their clothes are very affordable. The owner is very friendly and has the best customer service I have come across. It’s a hidden treasure that needs to be revealed.  
              ⭐️⭐️⭐️⭐️⭐️"
               namePerson="Girma B"
-
             />
           </div>
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
@@ -40,7 +39,6 @@ function Testimonial() {
               comment="This is a wonderful place to shop. VERY HELPFUL PEOPLE. All items, better than expected. I am looking to shopping here again. inshallah
               ⭐️⭐️⭐️⭐️"
               namePerson="Nardos K"
-
             />
           </div>
         </div>

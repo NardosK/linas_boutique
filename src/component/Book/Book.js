@@ -6,11 +6,10 @@ function Book() {
   const [second, setSecond] = useState(0);
 
   useEffect(() => {
-
     if (second > 0) {
       setSecond(second - 1);
     } else {
-      setShowToast();
+      setShowToast(false);
     }
   }, [second]);
   const form = useRef();
@@ -32,6 +31,7 @@ function Book() {
           console.log(error.text);
         }
       );
+    setShowToast(true);
     e.target.reset();
   };
   return (
@@ -108,7 +108,7 @@ function Book() {
                   <input
                     id="time1"
                     type="radio"
-                    value=""
+                    value="morning"
                     name="Morning"
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
@@ -124,7 +124,7 @@ function Book() {
                     checked
                     id="time2"
                     type="radio"
-                    value=""
+                    value="afternoon"
                     name="Afternoon"
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
@@ -203,9 +203,9 @@ function Book() {
             <div class="p-2 w-full">
               <button
                 class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                onClick={() => {
-                  setShowToast(true);
-                }}
+                // onClick={() => {
+                //   setShowToast(true);
+                // }}
               >
                 Book
               </button>
