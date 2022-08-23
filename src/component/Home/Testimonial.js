@@ -17,7 +17,8 @@ function Testimonial() {
               img={img1}
               title="Great product"
 
-              comment=" I have shopped at Lina's Boutique for all my hijabs, for modest clothing, and for prayer rugs, oils and under scarves. They have been wonderful quality, design, variety and beauty."
+              comment=" I have shopped at Lina's Boutique for all my hijabs, for modest clothing, and for prayer rugs, oils and under scarves. They have been wonderful quality, design, variety and beauty.
+              ⭐️⭐️⭐️⭐️"
               namePerson="Munisa K"
             />
           </div>
@@ -27,7 +28,7 @@ function Testimonial() {
               title="So beautiful!!!"
 
               comment="First of all, I love, love, love this place. They always come through for me at the very last minute and their clothes are very affordable. The owner is very friendly and has the best customer service I have come across. It’s a hidden treasure that needs to be revealed.  
-             ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️"
+             ⭐️⭐️⭐️⭐️⭐️"
               namePerson="Girma B"
 
             />
@@ -36,7 +37,8 @@ function Testimonial() {
             <Test
               img={img3}
               title="Customer Service is great"
-              comment="This is a wonderful place to shop. VERY HELPFUL PEOPLE. All items, better than expected. I am looking to shopping here again. inshallah"
+              comment="This is a wonderful place to shop. VERY HELPFUL PEOPLE. All items, better than expected. I am looking to shopping here again. inshallah
+              ⭐️⭐️⭐️⭐️"
               namePerson="Nardos K"
 
             />
