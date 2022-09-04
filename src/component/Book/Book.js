@@ -99,7 +99,8 @@ function Book() {
                 />
               </div>
             </div>
-            <div class="p-2 w-full md:w-1/2">
+
+            {/* <div class="p-2 w-full md:w-1/2">
               <div class="relative">
                 <label for="date" class="leading-7 text-sm text-gray-600">
                   Time
@@ -136,7 +137,8 @@ function Book() {
                   </label>
                 </div>
               </div>
-            </div>
+            </div> */}
+
             <div class="p-2 w-full">
               <div class="relative">
                 <label for="message" class="leading-7 text-sm text-gray-600">

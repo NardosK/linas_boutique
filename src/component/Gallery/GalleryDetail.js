@@ -19,15 +19,12 @@
 
 // export default GalleryDetail;
 
+import * as React from "react";
 
-import * as React from 'react';
-
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
-import { CCloseButton } from '@coreui/react'
-import CloseIcon from '@mui/icons-material/Close';
-
-
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import { CCloseButton } from "@coreui/react";
+import CloseIcon from "@mui/icons-material/Close";
 
 function GalleryDetail({ imagePath }) {
   const [open, setOpen] = React.useState(false);
@@ -36,26 +33,22 @@ function GalleryDetail({ imagePath }) {
 
   return (
     <>
-
-      <div
-
-        className="h-72 md:h-[32rem] lg:h-[40rem] lg:w-1/3 w-full md:w-1/2 p-4">
+      <div className="h-[24rem] lg:h-[32rem] lg:w-1/3 w-full md:w-1/2 p-4">
         <div className="flex h-full w-full relative" onClick={handleOpen}>
           <img
             alt="gallery"
             className="w-full h-full rounded-lg object-fill"
             src={imagePath}
-          /></div>
-
+          />
+        </div>
 
         <Modal
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
-          className="w-[80vh] h-[80vh] m-auto"
+          className="w-[90%] md:w-fit h-[60%] md:h-[70%] m-auto"
         >
-
           <div className="w-full h-full">
             <img
               alt="gallery"
@@ -64,7 +57,8 @@ function GalleryDetail({ imagePath }) {
             />
           </div>
         </Modal>
-      </div ></>
+      </div>
+    </>
   );
 }
 export default GalleryDetail;
