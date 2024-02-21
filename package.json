@@ -1,7 +1,7 @@
 {
-  "name": "linas_boutique",
+  "name": "fikir_dicore",
   "version": "0.1.0",
-  "homepage": "https://linaboutiques.com",
+  "homepage": "https://fikir_dicore.com",
   "private": true,
   "dependencies": {
     "@coreui/react": "^4.3.0",

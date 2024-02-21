@@ -213,13 +213,13 @@ function Book() {
             <div class="p-2 w-full border-t border-gray-200 text-center">
               <p class="leading-normal my-3">
                 <span className="font-bold">
-                  5707 Seminary Rd, Suite 208
+                4255 juniper st
                   <br />
-                  Falls Church, VA 22041
+                  
                 </span>
                 <br />
                 <a href="tel:17032832392" className="text-white">
-                  +1-703-283-2392
+                +1-213-294-9387
                 </a>
                 <br /> MONDAY TO SUNDAY
               </p>

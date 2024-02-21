@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import ResponsiveImage from "react-responsive-image";
 function Banner() {
   let [currentIndex, setIndex] = useState(0);
   const [image, setImage] = useState("");

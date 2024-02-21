@@ -1,8 +1,8 @@
 import React from "react";
 import Test from "./Test";
-import img1 from "../../assets/newimg/PHOTO-2022-06-16-18-33-38.jpg"
-import img2 from "../../assets/gallery/WhatsApp Image 2022-07-25 at 11.07.05 PM.jpeg"
-import img3 from "../../assets/hero/image1.jpg"
+import img1 from "../../assets/images/fikImage/1 (26).jpg"
+import img2 from "../../assets/images/fikImage/1 (5).jpg"
+import img3 from "../../assets/images/fikImage/1 (12).jpg"
 function Testimonial() {
   return (
     <section className="text-gray-600 w-full body-font">
@@ -15,9 +15,13 @@ function Testimonial() {
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <Test
               img={img1}
-              title="Great product"
+              title="Joyful Fantasia"
 
-              comment=" I have shopped at Lina's Boutique for all my hijabs, for modest clothing, and for prayer rugs, oils and under scarves. They have been wonderful quality, design, variety and beauty.
+              comment="  Fikir Decore brought pure magic to 
+              my daughter's birthday. Their Whimsical Birthdays 
+              service is a game-changer. Creative, imaginative, 
+              and unforgettable. 
+              They know how to make birthdays truly special!
               ⭐️⭐️⭐️⭐️"
               namePerson="Munisa K"
             />
@@ -25,9 +29,12 @@ function Testimonial() {
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <Test
               img={img2}
-              title="So beautiful!!!"
+              title="Elegance Unveiled!!!"
 
-              comment="First of all, I love, love, love this place. They always come through for me at the very last minute and their clothes are very affordable. The owner is very friendly and has the best customer service I have come across. It’s a hidden treasure that needs to be revealed.  
+              comment="Fikir Decore elevated my graduation party with unmatched 
+              sophistication. The modern, elegant decor perfectly
+               reflected the significance of the occasion. 
+              They turned my celebration into a true work of art.
              ⭐️⭐️⭐️⭐️⭐️"
               namePerson="Girma B"
             />
@@ -35,10 +42,13 @@ function Testimonial() {
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <Test
               img={img3}
-              title="Customer Service is great"
-              comment="This is a wonderful place to shop. VERY HELPFUL PEOPLE. All items, better than expected. I am looking to shopping here again. inshallah
+              title="Enchantopia"
+              comment="Fikir Decore transformed our wedding into a fairytale. 
+              Impeccable attention to detail and breathtaking floral arrangements 
+              created a magical atmosphere. 
+              Grateful for the extraordinary memories!
               ⭐️⭐️⭐️⭐️"
-              namePerson="Nardos K"
+              namePerson="Beza D"
             />
           </div>
         </div>

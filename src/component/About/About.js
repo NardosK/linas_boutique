@@ -1,36 +1,33 @@
 import React from "react";
-import lina from "../../assets/images/lina.jpg";
+import lina from "../../assets/image/aaaaaa.jpg";
 
 function About() {
   return (
-    <div className="container px-6 min-h-[68vh] mx-auto my-4 text-xl text-justify">
+    <div className="container px-6 min-h-[75vh] mx-auto my-4 text-xl text-justify">
       <div className="h-full items-center text-sm md:text-base w-full mx-auto lg:flex flex-row-reverse justify-between">
         <div className="h-full w-full lg:w-1/2 border-2 border-black">
           <img
             src={lina}
-            alt="Lina"
+            alt="Fikir_Buna"
             className="w-full h-full mx-auto object-cover"
           />
         </div>
         <div className="mt-4 lg:w-2/5">
           <p>
-            <span className="font-medium md:font-bold">Lina’s Boutique</span> we
-            offer a wide range of apparel traditional Islamic wear to fit any
-            woman’s unique sense of style. Our accessories are carefully curated
-            to provide our customers the latest fashions. To keep our customers
-            in style we post new arrivals daily, as well as offer stylist picks
-            to help any indecisive shoppers.
+            <span className="font-medium md:font-bold">Fikir Dicore</span> we
+            Fikir Decore is a premier event decoration service dedicated to transforming ordinary occasions into extraordinary memories.
+             Specializing in weddings, graduations, birthdays, and baby showers, Fikir Decore's signature style blends elegance, sophistication, and creativity. 
+             From enchanting wedding decor to chic graduation vibes and whimsical birthdays, 
+             their designs cater to a variety of celebrations. The team at Fikir Decore prides 
+             itself on creative innovation, meticulous detailing, and providing a stress-free experience for clients.
+              Their goal is to make every event unique and personalized, ensuring that each celebration is a beautiful
+               and memorable experience. Contact Fikir Decore to turn your vision into a stunning reality and let them 
+               be the brushstroke that paints your event with beauty and joy. 
+            Elevate your moments with Fikir Decore, where dreams meet design.
           </p>
-          <br />
-          <br />
-          <p>
-            Beyond helping you look your best, we strives to make every purchase
-            a positive experience. Our top priorities are excellent customer
-            service, exceptionally quick order processing, ultra fast shipping
-            times, and a hassle-free return policy. We value your feedback,
-            whether positive or constructive and we are continuously working to
-            improve your experience.
-          </p>
+           <br ></br>
+          
+         
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "../../assets/images/logo.png";
+import logoImage from "../../assets/images/Sandy_Ppl-16_Single-02.jpg";
 import {
   SiFacebook,
   SiTiktok,
@@ -26,19 +26,19 @@ function Footer() {
               />
             </div>
             <div className="ml-3 font-serif text-justify text-xl">
-              Lina's Boutique
+              Fikir's Decore
             </div>
           </div>
         </a>
         <p className="text-sm font-serif text-center sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
-          ©2022 Lina's Boutique. — Powered by
+          ©2023 Fikir's Decore. — Powered by
           <a
             href="https://abyssiniaweb.com/"
             className="ml-1 text-yellow-500 font-bold"
             target="_blank"
             rel="noopener noreferrer"
           >
-            AWD Corp.
+           Girma G.
           </a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

@@ -1,3 +1,4 @@
+import { TablePagination } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import GalleryDetail from "./GalleryDetail";
 
@@ -22,12 +23,12 @@ function Gallery() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
-            Master Cleanse Reliac Heirloom
+          Capturing Extraordinary Moments with Fikir Decore
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven't heard of them man bun deep jianbing selfies heirloom.
+          Welcome to our Gallery, where moments come to life and memories unfold in vibrant colors and exquisite details. Explore a visual 
+          journey through our diverse portfolio, showcasing the magic we've crafted for weddings, graduations, birthdays, and more. Each image tells a unique story of love, success, 
+          and celebration. Let these snapshots inspire your imagination and envision the possibilities for your next extraordinary event with Fikir Decore.
           </p>
         </div>
 
@@ -36,7 +37,8 @@ function Gallery() {
             <GalleryDetail imagePath={filePath} key={index} />
           ))}
         </div>
-        <nav aria-label="Page navigation example" className="justify-center">
+        <TablePagination />
+        {/* <nav aria-label="Page navigation example" className="justify-center">
           <ul class="inline-flex items-center -space-x-px">
             <li>
               <a
@@ -122,7 +124,7 @@ function Gallery() {
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </section>
   );

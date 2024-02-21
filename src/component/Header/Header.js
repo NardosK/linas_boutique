@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoImage from "../../assets/images/logo.png";
+import logoImage from "../../assets/images/Sandy_Ppl-16_Single-02.jpg";
 
 function Header() {
   return (
@@ -19,10 +19,10 @@ function Header() {
           </div>
           <div className="justify-center md:justify-start">
             <div className="md:ml-3 text-3xl font-medium md:text-xl font-serif">
-              <span>LINA'S BOUTIQUE</span>
+              <span>Fikir'S Decore</span>
             </div>
             <div className="md:ml-3 text-xs font-sans">
-              All Traditional Islamic Wear for Women
+              All Your Decoration Needs
             </div>
           </div>
         </a>
